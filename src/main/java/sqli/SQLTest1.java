@@ -5,9 +5,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
 
+@Controller
 public class SQLTest1 {
-
+@PostMapping("/sqlTest1")
 	public void sqlTest1(HttpServletRequest request) {
 		String ip = request.getParameter("ip");
 		try {
